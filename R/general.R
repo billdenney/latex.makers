@@ -2,12 +2,10 @@
 #'
 #' @param x A character scalar (or something that can be coerced into a
 #'   character scalar)
-#' @param ... Named arguments that must be present for the optional argument to
-#'   work.
 #' @return The character scalar in French braces, "{x}".
+#' @family Latex Arguments
 #' @examples
 #' latex_required_arg("A")
-#' latex_optional_arg(NULL)
 #' @export
 latex_required_arg <- function(x) {
   UseMethod("latex_required_arg")
@@ -36,7 +34,15 @@ latex_required_arg.list <- function(x) {
   }
 }
 
-#' @describeIn latex_required_arg Generate optional arguments to a LaTeX call.
+#' Generate optional arguments to a LaTeX call.
+#' @family Latex Arguments
+#' @inheritParams latex_required_arg
+#' @param ... Named arguments that must be present for the optional argument to
+#'   work.
+#' @return The character scalar in square brackets, "[x]".
+#' @examples
+#' latex_optional_arg(NULL)
+#' latex_optional_arg(x="A")
 #' @export
 latex_optional_arg <- function(x=NULL, ...) {
   UseMethod("latex_optional_arg")
