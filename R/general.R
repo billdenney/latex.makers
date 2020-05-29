@@ -11,15 +11,19 @@ latex_required_arg <- function(x) {
   UseMethod("latex_required_arg")
 }
 
+#' @export
 latex_required_arg.default <- function(x) {
-  if (is.null(x)) {
-    stop("`x` may not be NULL.")
-  } else if (length(x) != 1) {
+  if (length(x) != 1) {
     stop("`x` must be a scalar.")
   }
   sprintf("{%s}", as.character(x))
 }
 
+latex_required_arg.NULL <- function(x) {
+  stop("`x` may not be NULL.")
+}
+
+#' @export
 latex_required_arg.list <- function(x) {
   if (length(x)) {
     if (any(missing_required <- sapply(X=x, FUN=is.null))) {
@@ -48,10 +52,12 @@ latex_optional_arg <- function(x=NULL, ...) {
   UseMethod("latex_optional_arg")
 }
 
+#' @export
 latex_optional_arg.NULL <- function(x=NULL, ...) {
   ""
 }
 
+#' @export
 latex_optional_arg.default <- function(x=NULL, ...) {
   if (length(x) != 1) {
     stop("`x` must be a scalar.")
@@ -70,6 +76,7 @@ latex_optional_arg.default <- function(x=NULL, ...) {
   sprintf("[%s]", as.character(x))
 }
 
+#' @export
 latex_optional_arg.list <- function(x=NULL, ...) {
   if (length(x)) {
     null_optional <- sapply(X=x, FUN=is.null)
