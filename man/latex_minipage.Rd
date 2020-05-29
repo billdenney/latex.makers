@@ -4,8 +4,13 @@
 \alias{latex_minipage}
 \title{Generate a LaTeX minipage environment}
 \usage{
-latex_minipage(x, width = NULL, position = NULL, height = NULL,
-  inner_position = NULL)
+latex_minipage(
+  x,
+  width = NULL,
+  position = NULL,
+  height = NULL,
+  inner_position = NULL
+)
 }
 \arguments{
 \item{x}{The text to go within the minipage.  See Details.}

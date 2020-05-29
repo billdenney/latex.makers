@@ -20,6 +20,7 @@ Generate a required or optional arguments to a LaTeX call.
 latex_required_arg("A")
 }
 \seealso{
-Other Latex Arguments: \code{\link{latex_optional_arg}}
+Other Latex Arguments: 
+\code{\link{latex_optional_arg}()}
 }
 \concept{Latex Arguments}

@@ -24,6 +24,7 @@ latex_optional_arg(NULL)
 latex_optional_arg(x="A")
 }
 \seealso{
-Other Latex Arguments: \code{\link{latex_required_arg}}
+Other Latex Arguments: 
+\code{\link{latex_required_arg}()}
 }
 \concept{Latex Arguments}

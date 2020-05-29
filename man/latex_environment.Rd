@@ -4,8 +4,12 @@
 \alias{latex_environment}
 \title{Generate a LaTeX environment}
 \usage{
-latex_environment(x, environment_name, required_args = list(),
-  optional_args = list())
+latex_environment(
+  x,
+  environment_name,
+  required_args = list(),
+  optional_args = list()
+)
 }
 \arguments{
 \item{x}{The contents of the environment, a scalar vector where it will be

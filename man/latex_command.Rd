@@ -4,8 +4,12 @@
 \alias{latex_command}
 \title{Generate a LaTeX command}
 \usage{
-latex_command(x, required_args = list(), optional_args = list(),
-  brace_protect = TRUE)
+latex_command(
+  x,
+  required_args = list(),
+  optional_args = list(),
+  brace_protect = TRUE
+)
 }
 \arguments{
 \item{x}{The contents of the environment, a scalar vector where it will be
