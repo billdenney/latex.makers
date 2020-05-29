@@ -48,26 +48,26 @@ latex_optional_arg <- function(x=NULL, ...) {
   UseMethod("latex_optional_arg")
 }
 
+latex_optional_arg.NULL <- function(x=NULL, ...) {
+  ""
+}
+
 latex_optional_arg.default <- function(x=NULL, ...) {
-  if (is.null(x)) {
-    ""
-  } else {
-    if (length(x) != 1) {
-      stop("`x` must be a scalar.")
-    }
-    args <- list(...)
-    if (length(args)) {
-      if (is.null(names(args)) || any(names(args) == "")) {
-        stop("All optional arguments must be named.")
-      }
-      for (arg_idx in seq_along(args)) {
-        if (is.null(args[[arg_idx]])) {
-          stop("Previous optional argument ", names(args)[[arg_idx]], " must not be NULL.")
-        }
-      }
-    }
-    sprintf("[%s]", as.character(x))
+  if (length(x) != 1) {
+    stop("`x` must be a scalar.")
   }
+  args <- list(...)
+  if (length(args)) {
+    if (is.null(names(args)) || any(names(args) == "")) {
+      stop("All optional arguments must be named.")
+    }
+    for (arg_idx in seq_along(args)) {
+      if (is.null(args[[arg_idx]])) {
+        stop("Previous optional argument ", names(args)[[arg_idx]], " must not be NULL.")
+      }
+    }
+  }
+  sprintf("[%s]", as.character(x))
 }
 
 latex_optional_arg.list <- function(x=NULL, ...) {
