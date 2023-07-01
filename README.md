@@ -6,7 +6,7 @@
 [![R-CMD-check](https://github.com/billdenney/latex.makers/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/billdenney/latex.makers/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of latex.makers is to simplify teh creation of LaTeX code.
+The goal of latex.makers is to simplify the creation of LaTeX code.
 
 ## Installation
 
