@@ -1,10 +1,9 @@
-
 # latex.makers
 
 <!-- badges: start -->
-[![Codecov test coverage](https://codecov.io/gh/billdenney/latex.makers/branch/master/graph/badge.svg)](https://codecov.io/gh/billdenney/latex.makers?branch=master)
+[![Codecov test coverage](https://codecov.io/gh/billdenney/latex.makers/branch/main/graph/badge.svg)](https://codecov.io/gh/billdenney/latex.makers?branch=main)
 [![CRAN status](https://www.r-pkg.org/badges/version/latex.makers)](https://CRAN.R-project.org/package=latex.makers)
-[![Travis build status](https://travis-ci.com/billdenney/latex.makers.svg?branch=master)](https://travis-ci.com/billdenney/latex.makers)
+[![R-CMD-check](https://github.com/billdenney/latex.makers/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/billdenney/latex.makers/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The goal of latex.makers is to simplify teh creation of LaTeX code.
